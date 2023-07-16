@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/27182818284590/proto/bar";
+
+package bar;
+
+service Bar {
+  rpc DoBar(BarReq) returns (BarResp) {}
+}
+
+message BarReq {
+  int64 page = 1;
+}
+
+message BarResp {
+  string text = 1;
+}
